@@ -5,6 +5,9 @@ services:
       - sh-infra
     ports:
       - "9999:80"
+    deploy:
+      mode: replicated
+      replicas: 1
 
 networks:
   sh-infra:
