@@ -1,5 +1,11 @@
 services:
   frontend2:
     image: 192.168.228.132:15000/sh-frontend:0.0.1
+    networks:
+      - sh-infra
     ports:
       - "9999:80"
+
+networks:
+  sh-infra:
+    external: true
